@@ -83,11 +83,15 @@ GEM
     childprocess (3.0.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
+    content_disposition (1.0.0)
     crass (1.0.6)
+    down (5.1.1)
+      addressable (~> 2.5)
     erubi (1.9.0)
     execjs (2.7.0)
     faker (2.1.2)
       i18n (>= 0.8)
+    fastimage (2.1.7)
     ffi (1.12.2)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -203,6 +207,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     shellany (0.0.1)
+    shrine (3.2.1)
+      content_disposition (~> 1.0)
+      down (~> 5.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -254,6 +261,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   faker (= 2.1.2)
+  fastimage
   guard (= 2.16.2)
   guard-minitest (= 2.4.6)
   jbuilder (~> 2.7)
@@ -266,6 +274,7 @@ DEPENDENCIES
   rails-controller-testing (= 1.0.4)
   sass-rails (>= 6)
   selenium-webdriver
+  shrine (~> 3.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

@@ -15,6 +15,9 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'faker', '2.1.2'
 gem 'will_paginate', '3.1.8'
 gem 'bootstrap-will_paginate', '1.0.0'
+# images 
+gem "shrine", "~> 3.0"
+gem "fastimage"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

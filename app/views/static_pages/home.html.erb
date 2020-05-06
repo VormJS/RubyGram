@@ -1,10 +1,27 @@
-<div class="center jumbotron">
-  <h1>RubyGram</h1>
-  <h2>Welcome at RubyGram.</h2>
-  <h2>It's created to learn Ruby and Rails</h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<div>
-  <%= link_to image_tag("ruby.png", alt: "Ruby logo", width: "70"), "https://www.ruby-lang.org/" %>
-  <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
-</div>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="post_form">
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>RubyGram</h1>
+    <h2>Welcome at RubyGram.</h2>
+    <h2>It's created to learn Ruby and Rails</h2>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <div>
+    <%= link_to image_tag("ruby.png", alt: "Ruby logo", width: "70"), "https://www.ruby-lang.org/" %>
+    <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
+  </div>
+<% end %>

@@ -21,3 +21,10 @@ User.create!(name: 'Test User',
                password: password,
                password_confirmation: password)
 end
+
+# Generate posts for a subset of users.
+users = User.order(:created_at).take(5)
+51.times do
+  description = Faker::ChuckNorris.fact
+  users.each { |user| user.posts.create!(description: description) }
+end
