@@ -5,6 +5,9 @@ class User < ApplicationRecord
   # comments
   has_many :comments, dependent: :destroy
 
+  # likes
+  has_many :likes, dependent: :destroy
+
   # follows
   has_many :follows
 

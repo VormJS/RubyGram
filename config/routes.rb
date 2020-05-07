@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
   resources :posts, only: [:create, :destroy] do
     resources :comments, only: [:create, :destroy]
+    resources :likes
   end
   resources :comments, only: [:create, :destroy]
   # , path: '/post/:id/comments'

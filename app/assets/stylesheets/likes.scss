@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.like_area{
+  overflow: hidden;
+}
+input.like_button{
+  background: transparent;
+  border: 1px solid #eaeaea;
+  width: 8%;
+  float: right;
+  clear: both;
+  &:hover {
+    background: lightgray;
+  }
+}
+
+input.unlike_button{
+  border: 1px solid indianred
+}

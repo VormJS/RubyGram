@@ -10,6 +10,14 @@
   </span>
   <span class="image"><%= image_tag post.image_url if post.image_url%></span>
   <span class="description"><%= post.description %></span>
+  <div class="like_area">
+    <% like = post.likes.where(user_id: current_user) %>
+    <% if like.exists? %>
+      <%= button_to "❤️ #{post.likes.count}", post_like_path(post, like), method: :delete, class: "like_button unlike_button btn" %>
+    <% else %>
+      <%= button_to "❤️ #{post.likes.count}", post_likes_path(post), method: :post, class: "like_button btn" %>
+    <% end %>
+  </div>
   <% if post.comments.any? %>
     <ol class="comments">
       <%= render post.comments %>
