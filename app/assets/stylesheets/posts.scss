@@ -30,7 +30,8 @@
   .timestamp {
     color: $gray-light;
     display: block;
-    margin: 0px 60px;
+    float: right;
+    padding-right: 5px;
   }
   .gravatar {
     float: left;

@@ -1,0 +1,10 @@
+<%= form_with(model: Comment.new, url: comments_path, local: true) do |f| %> 
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.hidden_field :post_id, value: post.id %>
+  <div class="field col-md-10">
+    <%= f.text_area :text, class: "form-control", placeholder: "Leave a comment..." %>
+  </div>
+  <div>
+    <%= f.submit "Post", class: "btn btn-primary col-md-2" %>
+  </div>
+<% end %>

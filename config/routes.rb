@@ -12,6 +12,10 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :posts, only: [:create, :destroy]
+  resources :posts, only: [:create, :destroy] do
+    resources :comments, only: [:create, :destroy]
+  end
+  resources :comments, only: [:create, :destroy]
+  # , path: '/post/:id/comments'
   resources :follows, only: [:create, :destroy]
 end

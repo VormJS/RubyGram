@@ -2,6 +2,9 @@ class User < ApplicationRecord
   # posts
   has_many :posts, dependent: :destroy
 
+  # comments
+  has_many :comments, dependent: :destroy
+
   # follows
   has_many :follows
 
