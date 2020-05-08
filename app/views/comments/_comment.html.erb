@@ -4,7 +4,7 @@
     <span class="user"><%= link_to comment.user.name, comment.user %></span>
     <span class="timestamp">
       Posted <%= time_ago_in_words(comment.created_at) %> ago.
-      <% if current_user?(comment.user) %>
+      <% if current_user.id == comment.user_id %>
         <%= link_to "❌", comment,  method: :delete,
                                         data: { confirm: "You sure?" } %>
       <% end %>

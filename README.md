@@ -12,8 +12,8 @@ https://cryptic-bayou-50956.herokuapp.com
 Task Requirements:
 | Feature | Done | Comment |
 |--|--|--|
-| User sign up | ✅ | need rework - Devise
-| User log in | ✅ |need rework - Devise
+| User sign up | ✔️ | need rework - Devise
+| User log in | ✔️ |need rework - Devise
 | User can post image | ✅ | not working at Heroku =(
 | User can follow | ✔️ | 
 | User can unfollow | ✔️ |
