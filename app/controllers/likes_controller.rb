@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :authenticate_user!, only: [:create, :destroy]
   before_action :like_owner, only: :destroy
   before_action :find_post
 
