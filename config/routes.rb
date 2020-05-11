@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
-  # devise_for :users
   root 'static_pages#home'
+  devise_for :users, skip: [:registrations]
   devise_scope :user do
-    get 'signup', to: 'users#new'
+    get 'signup', to: 'users#new', as: :new_user_registration
     get 'login', to: 'devise/sessions#new'
     post 'login', to: 'devise/sessions#create'
     get 'logout', to: 'devise/sessions#destroy'
     delete 'logout', to: 'devise/sessions#destroy'
-    # get 'signup', to: 'users/sign_up'
   end
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
